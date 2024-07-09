@@ -1,6 +1,9 @@
 function $(name) {
   return document.querySelector(name);
 }
+function $$(name) {
+  return document.querySelectorAll(name);
+}
 function $id(name) {
   return document.getElementById(name);
 }
@@ -166,3 +169,12 @@ function startLoading() {
     setTimeout(startLoading, 50);
   }
 }
+
+$id("next").onclick = function () {
+  let lists = $$(".slide-image .item");
+  $id("slide").appendChild(lists[0]);
+};
+$id("prev").onclick = function () {
+  let lists = $$(".slide-image .item");
+  $id("slide").prepend(lists[lists.length - 1]);
+};
