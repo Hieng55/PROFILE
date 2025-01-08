@@ -4,6 +4,7 @@ body {
   color: #eee;
   font-family: "Poppins", sans-serif;
   margin: 0;
+  padding: 0 20px;
   background-image: repeating-linear-gradient(to right, #2d2a44 0 1px, transparent 2px 200px),
     repeating-linear-gradient(to bottom, #2d2a44 0 1px, transparent 2px 200px), radial-gradient(at 50% 50%, #2d2a44, #1d1b34);
 }
@@ -17,7 +18,7 @@ body {
   list-style: none;
 }
 header img {
-  width: 25%;
+  width: 70%;
 }
 header {
   padding: 10px;
@@ -514,4 +515,88 @@ h1.right {
 }
 .buttons button:hover {
   background-color: #e2cd587e;
+}
+
+@media (max-width:1152px){
+  h1{
+    font-size: 3rem;
+  }
+  .content{
+    flex-direction: column;
+  }
+  .content figure{
+    width: 100%;
+  }
+  .content .text-content{
+    width: 100%;
+  }
+  .container{
+    width: 100%;
+    box-shadow: none;
+  }
+  .js-only{
+    padding: 0;
+  }
+ 
+}
+
+@media (max-width:882px){
+  .container .item .content{
+    display: none !important;
+  }
+  .slide-image{
+    padding: 0;
+  }
+  h1{
+    font-size: 1.5rem;
+  }
+  .content{
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+  }
+}
+@media (max-width:500px) {
+  .rotate-img .text-des{
+    padding: 0;
+  }
+  .rotate-img{
+    padding: 0;
+    width: 100%;
+  }
+  #loading{
+    width: 200px;
+    height: 200px;
+  }
+  #value-show{
+    font-size: 30px;
+  }
+  .css-only{
+    padding: 0;
+  }
+  .skill{
+    padding: 0;
+    margin-top: 40px;
+  }
+  header{
+    flex-direction: column;
+  }
+  header figure{
+    margin:20px 0;
+    display: flex;
+    justify-content: center;
+  }
+  .css-content{
+    margin: 20px 0;
+  }
+  .js-only h2{
+    font-size: 1.2rem;
+  }
+  .container .item{
+    transform: translate(-50%,-50%);
+  }
+  .buttons{
+    transform: translate(-50%, 0);
+    left: 50%;
+  }
 }
